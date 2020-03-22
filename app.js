@@ -7,6 +7,9 @@ const server = app.listen(process.env.APP_PORT);
 const io = socketio().listen(server);
 const game = require('./game')(io);
 
+console.log(`Server started at ${process.env.APP_PORT}`);
+console.log(`Allow origin - ${process.env.CLIENT_ORIGIN}`);
+
 io.set('origins', process.env.CLIENT_ORIGIN);
 io.on('connection', game.newClient);
 
