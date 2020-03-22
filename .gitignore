@@ -3,7 +3,7 @@ node_modules/
 someOtherfoler/
 .idea/
 
-
+*.pem
 # Compiled source #
 ###################
 *.com
