@@ -3,7 +3,7 @@ const cors = require('cors')
 const http = require('http').createServer(app);
 const socketio = require('socket.io');
 
-const server = app.listen(3000);
+const server = app.listen(process.env.APP_PORT);
 const io = socketio().listen(server);
 const game = require('./game')(io);
 
